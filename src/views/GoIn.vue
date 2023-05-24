@@ -1,6 +1,6 @@
 <template>
   <div class="go-in">
-    <banner img="../assets/img/bgtop.jpg" title="走进科建" />
+    <banner img="../assets/img/bgtop.jpg" title="走进大越" />
     <div class="section" v-loading="loading">
       <div class="section-content">
         <div class="content-summary">
@@ -8,26 +8,23 @@
             <p class="title">公司简介</p>
             <p class="eTitle">ABOUT US</p>
             <p class="content">
-              上海科建工程管理股份有限公司成立于2012年9月，注册资金500万。公司前身上海科建工程管理有限公司，
-              是一家从事专业工程技术服务及工程项目管理的企业。公司于2017年11月通过国家高新技术企业认定，
-              目前工程管理软件研发团队10人，包括硕士和研究生在内，平均年龄在35岁。公司自主研发工程项目管理
-              标准化+互联网协同工作系统平台，此软件广泛应用于工程项目管理过程，实现全覆盖检查、全过程控制、全方位协调的目标。
-              目前公司业务范围涉及上海、广东等多地，合作的单位有上海同济工程项目管理咨询有限公司、
-              上海华银日用品有限公司、中科建设开发总公司、广东怡轩房地产开发有限公司等多家知名企业。 立人立己、达人达己！公司一直秉承“
-              帮助施工单位解决技术问题、帮助业主解决协调问题 ”的管理理念，上海科建工程管理股份有限公司不断在工程项目管理领域开拓创新，
-              通过不断完善工程项目管理标准化+互联网协同工作系统平台，实现每项工程“无重大安全事故、无重大返工、工程施工材料无伪劣产品、
-              工程管理留下痕迹、施工过程可追溯”五大管理目标。
+              上海大跃节能工程有限公司拥有专业的技术力量和完善的生产能力，公司产品在采矿、筑路、建桥、房
+              屋建设等行业得到广泛应用，破碎机、磨粉机、给料机、振动筛、洗砂机、输送机等设备及系列产品，
+              全部通过了ISO9001:2000标准质量认证。
+              上海大跃节能工程有限公司是专业从事工业制粉丶建筑制砂、矿山破碎设备研制、开发和生产的科技企
+              业，是矿业技术设备的生产企业，位于水陆空便利的长江三角洲核心经济区-上海，是科技与传统技术
+              有效结合的技术企业。
             </p>
           </div>
           <div class="summary-right">
-            <img src="../assets/img/jianjietopmin.jpg" alt />
+            <img src="../assets/img/goin.jpg" alt />
           </div>
         </div>
-        <el-divider class="el-divider-active">
+        <!-- <el-divider class="el-divider-active">
           <i class="el-icon-arrow-down el-icon-arrow-down-active"></i>
-        </el-divider>
+        </el-divider> -->
         <!-- 发展历程 -->
-        <div class="content-course">
+        <!-- <div class="content-course">
           <div class="top">
             <h3>发展历程</h3>
             <p>DEVELOPMENT</p>
@@ -56,9 +53,10 @@
               <div class="swiper-button-next" slot="button-next"></div>
             </swiper>
           </div>
-        </div>
+        </div> -->
 
-        <div class="content-culture">
+        <!-- 企业文化 -->
+        <!-- <div class="content-culture">
           <h3>企业文化</h3>
           <h3>CULTURE</h3>
           <p>我们只专注一件事情——工程项目管理</p>
@@ -66,9 +64,9 @@
           <span>确保工程施工单位无大面积返工</span>
           <span>确保工程材料及设备无伪劣产品</span>
           <span>确保工程管理留下痕迹、实施过程可追溯</span>
-        </div>
+        </div> -->
         <!-- 公司荣誉 -->
-        <div class="content-honor">
+        <!-- <div class="content-honor">
           <div class="honor-big-img">
             <el-dialog :title="dialogTitle" :visible.sync="dialogTableVisible">
               <img v-lazy="dialogUrl" alt />
@@ -88,9 +86,9 @@
             </li>
           </ul>
           <p>点击图片查看大图</p>
-        </div>
+        </div> -->
         <!-- 团队风采 -->
-        <div class="content-team">
+        <!-- <div class="content-team">
           <div class="top">
             <h3>团队风采</h3>
             <p>TEAM</p>
@@ -100,9 +98,9 @@
               <div class="swiper-img" v-lazy:background-image="imgserver + team.Img"></div>
             </el-carousel-item>
           </el-carousel>
-        </div>
+        </div> -->
         <!-- 合作伙伴 -->
-        <div class="content-partner">
+        <!-- <div class="content-partner">
           <div class="top">
             <h3>合作伙伴</h3>
             <p>RARTNERS</p>
@@ -112,7 +110,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

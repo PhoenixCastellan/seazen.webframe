@@ -16,7 +16,7 @@
           <!-- <el-menu-item index="/news">新闻资讯</el-menu-item> -->
           <!-- <el-menu-item index="/product">产品中心</el-menu-item> -->
           <el-menu-item index="/case">产品中心</el-menu-item>
-          <el-menu-item index="/goin">走进大越</el-menu-item>
+          <el-menu-item index="/goin">走进大跃</el-menu-item>
           <!-- <el-menu-item index="/download">下载APP</el-menu-item> -->
         </el-menu>
       </el-header>
@@ -55,7 +55,7 @@
           <img src="./assets/img/ercode.png" alt />
         </div>
         <div class="copyright">
-          <span>大越版权所有</span>
+          <span>大跃版权所有</span>
         </div>
       </div>
     </el-container>
@@ -164,5 +164,8 @@ body {
       line-height: 30px;
     }
   }
+}
+.el-menu{
+  background: transparent!important;
 }
 </style>

@@ -149,10 +149,14 @@ export default {
 
   .page {
     text-align: center;
-    height: 100px;
+    height: 150px;
     overflow: hidden;
 
-    h3,
+    h3{
+      font-size: 60px;
+      font-weight: 400;
+      color: #fff;
+    }
     p {
       font-size: 40px;
       font-weight: 400;

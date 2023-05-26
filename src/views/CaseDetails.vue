@@ -8,8 +8,22 @@
         <p class="product-time">{{ caseIdList.CreateTime }}</p>
         <p class="product-content">{{ caseIdList.Content }}</p>
       </div>
-    </div>
-    <!-- <div class="case-product">
+      <div class="case-product-table">
+        <el-table :data="caseIdList.Specification">
+          <el-table-column label="产量" prop="id" align="center"></el-table-column>
+          <el-table-column label="进料粒度" prop="name" align="center"></el-table-column>
+          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
+        </el-table>
+      </div>
+
+      <div class="case-product-content">
+        <el-carousel indicator-position="outside" style="width:100%;" :interval="2000" >
+          <el-carousel-item v-for="item in 4" :key="item">
+            <img :src="caseIdList.IllustratedBook[item-1]">
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <!-- <div class="case-product">
       <div class="case-product-content">
         <img v-lazy="imgserver + caseIdList.Img" alt />
         <p class="product-title">{{ caseIdList.Title }}</p>
@@ -17,6 +31,7 @@
         <p class="product-content">{{ caseIdList.Content }}</p>
       </div>
     </div> -->
+    </div>
   </div>
 </template>
 
@@ -30,7 +45,9 @@ export default {
   data() {
     return {
       pid: 0,
-      caseIdList: BaseData.ProductList[this.$route.params.id-1]
+      caseIdList: BaseData.ProductList[this.$route.params.id - 1],
+      currentIndex: 0,
+      timer: null
     };
   },
   created() {
@@ -52,12 +69,36 @@ export default {
       //     .catch(function(error) {
       //       window.console.log(error);
       //     });
+    },
+    gotoPage(index) {
+      this.currentIndex = index
+    },
+    runInv() {
+      this.timer = setInterval(() => {
+        this.gotoPage(this.nextIndex)
+      }, 3000)
+    },
+  },
+  computed: {
+    prevIndex() {
+      if (this.currentIndex === 0) {
+        return this.caseIdList.IllustratedBook.length - 1
+      } else {
+        return this.currentIndex - 1
+      }
+    },
+    nextIndex() {
+      if (this.currentIndex === this.caseIdList.IllustratedBook.length - 1) {
+        return 0
+      } else {
+        return this.currentIndex + 1
+      }
     }
   }
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less" >
 .case {
   width: 100%;
   height: 100%;
@@ -95,5 +136,73 @@ export default {
         padding: 20px 0;
       }
     }
+
+    &-table {
+      width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 50px 0;
+    }
   }
-}</style>
+
+
+.banner {
+  position: relative;
+  margin-bottom: 0.7rem;
+
+  .current {
+    color: #ff6700;
+  }
+
+  .page {
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+    ul {
+      float: right;
+    }
+  }
+
+  ul li {
+    list-style: none;
+    float: left;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+  }
+}
+
+.banner img {
+  width: 100%;
+  max-height: 680px;
+}
+
+.el-table td.el-table__cell,
+.el-table th.el-table__cell.is-leaf,
+.el-table::before {
+  border: none;
+  background: transparent;
+}
+
+th {
+  font-size: 18px;
+  color: #000;
+}
+.el-carousel__container{
+  height: 430px;
+  img{
+    height: 430px;
+  }
+}
+
+}
+</style>

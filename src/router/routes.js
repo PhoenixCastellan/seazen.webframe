@@ -1,36 +1,43 @@
 export default [{
   path: '/',
   name: 'home',
+  meta:{title:'大跃节能'},
   component: () => import('@/views/Home.vue')
 },
 {
   path: '/news',
   name: 'news',
+  meta:{title:'大跃节能'},
   component: () => import('@/views/News.vue'),
 },
 {
   path: '/newsdetails/:id',
   name: 'newsdetails',
+  meta:{title:'产品中心'},
   component: () => import('@/views/NewsDetails.vue'),
 },
 {
   path: '/product',
   name: 'product',
+  meta:{title:'大跃节能'},
   component: () => import('@/views/Product.vue'),
 },
 {
   path: '/case',
   name: 'case',
+  meta:{title:'产品中心'},
   component: () => import('@/views/Case.vue')
 },
 {
   path: '/casedetails/:id',
   name: 'casedetails',
+  meta:{title:'产品中心'},
   component: () => import('@/views/CaseDetails.vue')
 },
 {
   path: '/goin',
   name: 'goin',
+  meta:{title:'走进大跃'},
   component: () => import('@/views/GoIn.vue')
 },
 {

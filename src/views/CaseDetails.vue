@@ -3,12 +3,19 @@
     <banner img="../assets/img/bgtop.jpg" />
     <div class="case-product">
       <div class="case-product-content">
-        <img v-lazy="imgserver + caseIdList.Img" alt />
         <p class="product-title">{{ caseIdList.Title }}</p>
+        <div class="case-product-content">
+          <el-carousel indicator-position="outside" style="width:100%;" :interval="2000">
+            <el-carousel-item v-for="item in 4" :key="item">
+              <img :src="caseIdList.IllustratedBook[item - 1]">
+            </el-carousel-item>
+          </el-carousel>
+        </div>
+        <!-- <img v-lazy="imgserver + caseIdList.Img" alt /> -->
         <p class="product-time">{{ caseIdList.CreateTime }}</p>
         <p class="product-content">{{ caseIdList.Content }}</p>
       </div>
-      <div class="case-product-table">
+      <!-- <div class="case-product-table">
         <el-table :data="caseIdList.Specification">
           <el-table-column label="产量" prop="id" align="center"></el-table-column>
           <el-table-column label="进料粒度" prop="name" align="center"></el-table-column>
@@ -16,21 +23,21 @@
         </el-table>
       </div>
 
+      <div class="case-product-table">
+        <el-table :data="caseIdList.Specification">
+          <el-table-column label="产量" prop="id" align="center"></el-table-column>
+          <el-table-column label="进料粒度" prop="name" align="center"></el-table-column>
+          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
+          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
+          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
+          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
+        </el-table>
+      </div> -->
+      <div class="case-product">
       <div class="case-product-content">
-        <el-carousel indicator-position="outside" style="width:100%;" :interval="2000" >
-          <el-carousel-item v-for="item in 4" :key="item">
-            <img :src="caseIdList.IllustratedBook[item-1]">
-          </el-carousel-item>
-        </el-carousel>
+        <img v-lazy="imgserver + caseIdList.TechImg" alt />
       </div>
-      <!-- <div class="case-product">
-      <div class="case-product-content">
-        <img v-lazy="imgserver + caseIdList.Img" alt />
-        <p class="product-title">{{ caseIdList.Title }}</p>
-        <p class="product-time">{{ caseIdList.CreateTime }}</p>
-        <p class="product-content">{{ caseIdList.Content }}</p>
-      </div>
-    </div> -->
+    </div>
     </div>
   </div>
 </template>
@@ -148,61 +155,63 @@ export default {
   }
 
 
-.banner {
-  position: relative;
-  margin-bottom: 0.7rem;
+  .banner {
+    position: relative;
+    margin-bottom: 0.7rem;
 
-  .current {
-    color: #ff6700;
-  }
+    .current {
+      color: #ff6700;
+    }
 
-  .page {
-    background: rgba(0, 0, 0, .5);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+    .page {
+      background: rgba(0, 0, 0, .5);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
 
-    ul {
-      float: right;
+      ul {
+        float: right;
+      }
+    }
+
+    ul li {
+      list-style: none;
+      float: left;
+      width: 30px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      color: rgba(255, 255, 255, .8);
+      font-size: 14px;
     }
   }
 
-  ul li {
-    list-style: none;
-    float: left;
-    width: 30px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    color: rgba(255, 255, 255, .8);
-    font-size: 14px;
+  .banner img {
+    width: 100%;
+    max-height: 680px;
   }
-}
 
-.banner img {
-  width: 100%;
-  max-height: 680px;
-}
+  .el-table td.el-table__cell,
+  .el-table th.el-table__cell.is-leaf,
+  .el-table::before {
+    border: none;
+    background: transparent;
+  }
 
-.el-table td.el-table__cell,
-.el-table th.el-table__cell.is-leaf,
-.el-table::before {
-  border: none;
-  background: transparent;
-}
+  th {
+    font-size: 18px;
+    color: #000;
+  }
 
-th {
-  font-size: 18px;
-  color: #000;
-}
-.el-carousel__container{
-  height: 430px;
-  img{
+  .el-carousel__container {
     height: 430px;
+
+    img {
+      height: 430px;
+    }
   }
-}
 
 }
 </style>

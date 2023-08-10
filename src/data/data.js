@@ -11,6 +11,7 @@ export default {
             "Content":"欧版颚式破碎机又叫PEW颚式破碎机,PEW新型颚式破碎机。欧版颚式破碎机是在PE颚式破碎机的基础上研发而成的新一代破碎机，欧版颚式破碎机具有调节简单，抗压性强，使用寿命增长，产量高等优点。",
             "Del":null,
             "CreateTime":"2020-06-05T21:12:45.387",
+            "TechImg":require("../assets/img/product/0.jpg"),
             "IllustratedBook":[
                 require('../assets/img/product/0.jpg'),
                 require('../assets/img/product/1.jpg'),

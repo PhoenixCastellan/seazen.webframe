@@ -13,7 +13,7 @@ NProgress.configure({
   })
 Vue.use(VueRouter)
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     routes,
     scrollBehavior(to, from, savedPosition) {
         // return 期望滚动到哪个的位置

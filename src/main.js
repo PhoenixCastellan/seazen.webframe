@@ -49,7 +49,7 @@ axios.defaults.baseURL = 'http://shkjgw.shkjem.com/api/'
 Vue.prototype.$http = axios
 
 // 图片服务器地址
-Vue.prototype.imgserver = "http://localhost:8088"
+Vue.prototype.imgserver = "http://118.89.201.33"//"http://localhost:8088"
 // Vue.prototype.imgserver = 'http://shkjgw.shkjem.com/'
 
 new Vue({

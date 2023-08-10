@@ -17,8 +17,7 @@ export default {
                 require('../assets/img/product/1.jpg'),
                 require('../assets/img/product/2.jpg'),
                 require('../assets/img/product/3.jpg')
-            ],
-            Specification: [{ id: "15-700（t/h）", name: "200-1000（mm）", ctime: "20-275（mm）" }]
+            ]
         },
         {
             "Id":2,

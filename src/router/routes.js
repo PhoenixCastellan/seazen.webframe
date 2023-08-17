@@ -35,6 +35,12 @@ export default [{
   component: () => import('@/views/CaseDetails.vue')
 },
 {
+  path: '/casedetailshaisun/:id',
+  name: 'casedetailshaisun',
+  meta:{title:'产品中心'},
+  component: () => import('@/views/CaseDetailshaisun.vue')
+},
+{
   path: '/goin',
   name: 'goin',
   meta:{title:'走进大跃'},

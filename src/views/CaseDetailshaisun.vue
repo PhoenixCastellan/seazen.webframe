@@ -1,61 +1,9 @@
 <template>
   <div class="case">
     <banner img="../assets/img/bgtop.jpg" />
-
-    <div class="case-product">
-      <div class="case-product-content">
-        <!-- <img v-lazy="imgserver + caseIdList.Img" alt /> -->
-
-        <!-- <div class="case-product-content">
-          <el-carousel indicator-position="outside" style="width:100%;" :interval="2000">
-            <el-carousel-item v-for="item in 4" :key="item">
-              <img :src="caseIdList.IllustratedBook[item - 1]">
-            </el-carousel-item>
-          </el-carousel>
-        </div> -->
-        <p class="product-title">{{ caseIdList.name }}</p>
-          <img v-lazy="caseIdList.mainimg" alt />
-        <p class="product-content">{{ caseIdList.DESC }}</p>
-      </div>
-      <!-- <div class="case-product-table" v-if="caseIdList.Specification && caseIdList.Specification.length > 0">
-        <el-table :data="caseIdList.Specification">
-          <el-table-column label="产量" prop="id" align="center"></el-table-column>
-          <el-table-column label="进料粒度" prop="name" align="center"></el-table-column>
-          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
-        </el-table>
-      </div> -->
-
-      <!-- <div class="case-product-table">
-        <el-table :data="caseIdList.Specification">
-          <el-table-column label="产量" prop="id" align="center"></el-table-column>
-          <el-table-column label="进料粒度" prop="name" align="center"></el-table-column>
-          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
-          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
-          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
-          <el-table-column label="出料粒度" prop="ctime" align="center"></el-table-column>
-        </el-table>
-      </div> -->
-
-      <!-- <div>
-          <el-cascader
-            :options="warehouseList"
-            v-model="listQuery.storeList"
-            ref="cascaderStore"
-            popper-class="custom_cascader"
-            :props="{label: 'storeroom_name', value: 'storeroom_id', children: 'store_list', checkStrictly: true, expandTrigger: 'hover', emitPath: true}"
-            filterable
-            clearable
-            placeholder="请选择..."
-            @change="autoCloseCascaderDropdown('cascaderStore')"
-          ></el-cascader>
-        </div> -->
-      <div class="case-product">
-      <div class="case-product-content">
-        <p class="product-title">技术规格</p>
-          <img v-lazy="caseIdList.techimg" alt />
-      </div>
-      </div>
-    </div>
+    　　<iframe id="frame" style="width: 100%;height: 300px; border: 0px;margin:0;"
+      src="file:///C:/Users/83610/Desktop/新建文件夹 (5)/RGT系列脉冲脱磁器_山东松海机械设备有限公司.html">
+    </iframe>
   </div>
 </template>
 
@@ -69,7 +17,7 @@ export default {
   data() {
     return {
       pid: 0,
-      caseIdList: BaseData.products.find(item=>item.id==this.$route.params.id),
+      caseIdList: BaseData.ProductList[this.$route.params.id - 1],
       currentIndex: 0,
       timer: null
     };
@@ -230,5 +178,4 @@ export default {
     }
   }
 
-}
-</style>
+}</style>
